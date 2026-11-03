@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation {
   inherit version;
 
   src = fetchurl {
-    url = "https://github.com/datadog-labs/pup/releases/download/v${version}/${source.asset}";
+    url = "https://github.com/DataDog/pup/releases/download/v${version}/${source.asset}";
     inherit (source) hash;
   };
 
@@ -66,8 +66,8 @@ stdenvNoCC.mkDerivation {
 
   meta = with lib; {
     description = "Pup CLI, an AI-agent-ready Datadog observability companion";
-    homepage = "https://github.com/datadog-labs/pup";
-    changelog = "https://github.com/datadog-labs/pup/releases/tag/v${version}";
+    homepage = "https://github.com/DataDog/pup";
+    changelog = "https://github.com/DataDog/pup/releases/tag/v${version}";
     license = licenses.asl20;
     platforms = builtins.attrNames sources;
     mainProgram = "pup";

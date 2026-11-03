@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-GITHUB_REPO="datadog-labs/pup"
+GITHUB_REPO="DataDog/pup"
 PACKAGE_FILE="package.nix"
 
 RED='\033[0;31m'
@@ -26,7 +26,7 @@ Options:
 Examples:
   scripts/update.sh
   scripts/update.sh --check
-  scripts/update.sh --version 0.54.1
+  scripts/update.sh --version 2.3.10
 EOF
 }
 

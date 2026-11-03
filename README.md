@@ -1,6 +1,6 @@
 # pup-cli-nix
 
-Nix flake for [Datadog Pup](https://github.com/datadog-labs/pup), an AI-agent-ready CLI for Datadog observability.
+Nix flake for [Datadog Pup](https://github.com/DataDog/pup), an AI-agent-ready CLI for Datadog observability.
 
 This repo packages upstream Pup release binaries so Nix and Devbox users can install Pup without Homebrew.
 
@@ -65,6 +65,10 @@ Supported systems:
 
 ## Updating
 
+CI checks daily and creates or updates a single `update-pup` PR. New releases replace the version in that PR instead of opening another one.
+
+Linux/macOS build and smoke tests run in the **Check for Updates** workflow linked from the PR body. Bot-created PR workflows may require approval, so updater validation calls the shared build workflow directly without an extra token.
+
 Update to the latest upstream Pup release:
 
 ```bash
@@ -74,7 +78,7 @@ Update to the latest upstream Pup release:
 Update to a specific version:
 
 ```bash
-./scripts/update.sh --version 0.54.1
+./scripts/update.sh --version 2.3.10
 ```
 
 Only check if a newer release exists:
