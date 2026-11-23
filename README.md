@@ -67,7 +67,7 @@ Supported systems:
 
 CI checks daily and creates or updates a single `update-pup` PR. New releases replace the version in that PR instead of opening another one.
 
-Linux/macOS build and smoke tests run in the **Check for Updates** workflow linked from the PR body. Bot-created PR workflows may require approval, so updater validation calls the shared build workflow directly without an extra token.
+Bot-created PRs don't trigger `pull_request` runs without approval, so the updater dispatches the **Build** workflow on `update-pup`; its Linux/macOS build and smoke test checks show up on the PR.
 
 Update to the latest upstream Pup release:
 
